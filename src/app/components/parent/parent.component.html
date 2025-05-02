@@ -1,0 +1,7 @@
+<button (click)="increment()">Increment Counter</button>
+<p>Counter: {{ counter }}</p>
+
+<div *ngFor="let user of users; trackBy: trackById">
+  <app-child [user]="user"></app-child>
+  <button (click)="changeUserName(users.indexOf(user))">Change Name</button>
+</div>

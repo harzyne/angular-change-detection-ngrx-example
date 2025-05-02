@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ParentComponent } from './components/parent/parent.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [ParentComponent],
+  template: `<h1>Angular Change Detection Example</h1><app-parent />`,
 })
-export class AppComponent {
-  title = 'angular-change-detection-ngrx-example';
-}
+export class AppComponent {}
